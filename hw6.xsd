@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+    targetNamespace="http://www.cse532.com" xmlns="http://www.cse532.com">
+    <!-- Definition of simple elements. -->
+    <xs:element name="AirportName" type="xs:string"/>
+    <xs:element name="AirportCity" type="xs:string"/>
+    <xs:element name="AirportCountry" type="xs:string"/>
+
+    <xs:element name="AirlineName" type="xs:string"/>
+    <xs:element name="AirlineCode" type="xs:string"/>
+    <xs:element name="ArrivalTime" type="xs:time"/>
+    <xs:element name="DepartTime" type="xs:time"/>
+    <xs:element name="FlightNumber" type="xs:integer"/>
+
+    <!--<xs:element name="AirportCode" type="xs:string"/> -->
+    <xs:element name="AirportCode">
+        <xs:simpleType>
+            <xs:restriction base="xs:string">
+                <xs:pattern value="[a-zA-Z][a-zA-Z][a-zA-Z]"/>
+            </xs:restriction>
+        </xs:simpleType>
+    </xs:element>
+    
+    <xs:element name="Airport">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="AirportCode"/>
+                <xs:element ref="AirportName"/>
+                <xs:element ref="AirportCity"/>
+                <xs:element ref="AirportCountry"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Airline">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="AirlineName"/>
+                <xs:element ref="AirlineCode"/>
+                <xs:element ref="Flight" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="AirFlightTime">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="AirportCode"/>
+                <xs:element ref="ArrivalTime"/>
+                <xs:element ref="DepartTime"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="Flight">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="FlightNumber"/>
+                <xs:element ref="AirFlightTime" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="AirLineFlights">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="Airport" maxOccurs="unbounded"/>
+                <xs:element ref="Airline" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="PK0_AirLineCode">
+             <xs:selector xpath="Airline"/>
+             <xs:field xpath="AirlineCode"/>
+        </xs:key>
+        <xs:key name="PK1_FligNumber">
+             <xs:selector xpath="Airline/Flight"/>
+             <xs:field xpath="FlightNumber"/>
+        </xs:key>
+        <xs:key name="PK2_AirportCode">
+            <xs:selector xpath="Airport"/>
+            <xs:field xpath="AirportCode"/>
+        </xs:key>
+        <xs:keyref name="FK1_AirportCode" refer="PK2_AirportCode">
+            <xs:selector xpath="Airline/Flight/AirFlightTime"/>
+            <xs:field xpath="AirportCode"/>
+        </xs:keyref>
+        <xs:unique name="UK1_AirportCode">
+            <xs:selector xpath="Airline/Flight/AirFlightTime"/>
+            <xs:field xpath="AirportCode"/>
+        </xs:unique>
+    </xs:element>
+
+</xs:schema>

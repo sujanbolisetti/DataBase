@@ -1,0 +1,44 @@
+Query1 Output 
+
+<AirportAirLineList xmlns="http://www.cse532.com">
+<Airport>
+<AirportCode>LHR</AirportCode>
+<Airline>
+<AirlineName>American Airlines</AirlineName>
+<AirlineName>Delta Airlines</AirlineName>
+</Airline>
+</Airport>
+<Airport>
+<AirportCode>JFK</AirportCode>
+<Airline>
+<AirlineName>United Airlines</AirlineName>
+</Airline>
+</Airport>
+<Airport>
+<AirportCode>BOS</AirportCode>
+<Airline>
+<AirlineName>Air France</AirlineName>
+</Airline>
+</Airport>
+<Airport>
+<AirportCode>HKG</AirportCode>
+<Airline>
+<AirlineName>United Airlines</AirlineName>
+</Airline>
+</Airport>
+</AirportAirLineList>
+
+
+Query2 Output
+
+<NonStopPairs xmlns="http://www.cse532.com">
+<Connection>
+<From>LHR</From>
+<To>JFK</To>
+</Connection>
+<Connection>
+<From>BOS</From>
+<To>ORD</To>
+</Connection>
+</NonStopPairs>
+
