@@ -1,0 +1,135 @@
+/* Question 1a : Output */
+Pairs
+ 102 Prerequiste Of 302
+ 202 Prerequiste Of 302
+ 102 Prerequiste Of 202
+ 
+/* Question 1b : Output */
+Student Course pairs
+ Mike is Not eligible for taking the course 202
+ 
+ 
+/* Question 2a : Output */
+Ans ques2a
+ c has path to 5
+ c has path to 3
+ a has path to 5
+ a has path to 4
+ a has path to 3
+ a has path to 2
+ a has path to 1
+ e has path to 5
+ e has path to 4
+ e has path to 3
+ e has path to 2
+ e has path to 1
+ d has path to 5
+ d has path to 4
+ d has path to 3
+ d has path to 2
+ d has path to 1
+ b has path to 5
+ b has path to 4
+ b has path to 3
+ b has path to 2
+ b has path to 1
+ 2 has path to f
+ 2 has path to e
+ 2 has path to d
+ 2 has path to b
+ 1 has path to f
+ 1 has path to e
+ 1 has path to d
+ 1 has path to b
+ 
+ /*  Question 2b : Output */
+ 
+ Ans ques2b
+ 1 has a path of e
+ 1 has a path of d
+ 1 has a path of c
+ 1 has a path of b
+ 1 has a path of f
+ 1 has a path of a
+ 1 has a path of 3
+ 1 has a path of 2
+ 2 has a path of 1
+ 2 has a path of 3
+ 2 has a path of 4
+ 2 has a path of a
+ 2 has a path of f
+ 2 has a path of b
+ 2 has a path of c
+ 2 has a path of d
+ 2 has a path of e
+ 3 has a path of 1
+ 3 has a path of 2
+ 3 has a path of 4
+ 3 has a path of 5
+ 3 has a path of a
+ 3 has a path of f
+ 3 has a path of b
+ 3 has a path of c
+ 3 has a path of d
+ 3 has a path of e
+ 4 has a path of 1
+ 4 has a path of 2
+ 4 has a path of 3
+ 4 has a path of 5
+ 4 has a path of a
+ 4 has a path of f
+ 4 has a path of b
+ 4 has a path of c
+ 4 has a path of d
+ 4 has a path of e
+ 5 has a path of 1
+ 5 has a path of 2
+ 5 has a path of 3
+ 5 has a path of 4
+ 5 has a path of a
+ 5 has a path of f
+ 5 has a path of b
+ 5 has a path of c
+ 5 has a path of d
+ 5 has a path of e
+ a has a path of 5
+ a has a path of 4
+ a has a path of 3
+ a has a path of 2
+ a has a path of 1
+ f has a path of 1
+ f has a path of 2
+ f has a path of 3
+ f has a path of 4
+ f has a path of 5
+ f has a path of a
+ f has a path of b
+ f has a path of c
+ f has a path of d
+ f has a path of e
+ b has a path of a
+ b has a path of 5
+ b has a path of 4
+ b has a path of 3
+ b has a path of 2
+ b has a path of 1
+ c has a path of a
+ c has a path of 5
+ c has a path of 4
+ c has a path of 3
+ c has a path of 2
+ c has a path of 1
+ d has a path of a
+ d has a path of 5
+ d has a path of 4
+ d has a path of 3
+ d has a path of 2
+ d has a path of 1
+ e has a path of a
+ e has a path of 5
+ e has a path of 4
+ e has a path of 3
+ e has a path of 2
+ e has a path of 1
+
+ 
